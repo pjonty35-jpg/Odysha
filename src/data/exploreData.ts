@@ -1,0 +1,228 @@
+export interface ExplorePlaceItem {
+  id: string;
+  name: string;
+  category: string;
+  categoryType: 'nature' | 'heritage' | 'spiritual' | 'beaches' | 'wildlife' | 'arts' | 'food' | 'hidden';
+  district: string;
+  rating: number;
+  reviewCount: number;
+  priceLevel: 'Low' | 'Moderate' | 'High' | 'Luxury';
+  priceDisplay: '₹ Low' | '₹ Moderate' | '₹₹ High' | '₹₹₹ Luxury';
+  badgeType: 'Hidden Gem' | 'Popular' | 'Community Pick';
+  badgeColor: string; // Tailwind color class or hex
+  image: string;
+  tipIcon: string;
+  tipText: string;
+  tipBgClass: string;
+  tipBorderClass: string;
+  verificationType: 'Community verified' | 'Officially verified';
+  updatedTime: string;
+  description: string;
+  bestTime: string;
+  duration: string;
+  accessibility: string[];
+}
+
+import gulmiImg from '../assets/images/explore_gulmi.jpg';
+import puriBeachImg from '../assets/images/explore_puri_beach.jpg';
+import konarkImg from '../assets/images/explore_konark.jpg';
+import chilikaImg from '../assets/images/explore_chilika.jpg';
+import raghurajpurImg from '../assets/images/explore_raghurajpur.jpg';
+import dudumaImg from '../assets/images/explore_duduma.jpg';
+import lingarajImg from '../assets/images/explore_lingaraj.jpg';
+import deomaliImg from '../assets/images/explore_deomali.jpg';
+
+export const EXPLORE_PLACES: ExplorePlaceItem[] = [
+  {
+    id: 'gulmi-waterfall',
+    name: 'Gulmi Waterfall',
+    category: 'Nature',
+    categoryType: 'nature',
+    district: 'Koraput',
+    rating: 4.7,
+    reviewCount: 128,
+    priceLevel: 'Low',
+    priceDisplay: '₹ Low',
+    badgeType: 'Hidden Gem',
+    badgeColor: 'bg-[#1b4332] text-white',
+    image: gulmiImg,
+    tipIcon: '💡',
+    tipText: 'Best before 9 AM for a peaceful experience.',
+    tipBgClass: 'bg-[#edf7ee] text-[#1b4332]',
+    tipBorderClass: 'border-[#cde5cf]',
+    verificationType: 'Community verified',
+    updatedTime: '3 days ago',
+    description: 'A secluded cascading waterfall hidden deep within the forested hills of Koraput, offering pristine emerald pools and untouched nature trails.',
+    bestTime: 'October to February',
+    duration: 'Half Day',
+    accessibility: ['Nature trails', 'Family friendly'],
+  },
+  {
+    id: 'puri-beach',
+    name: 'Puri Beach',
+    category: 'Beach • Nature',
+    categoryType: 'beaches',
+    district: 'Puri',
+    rating: 4.6,
+    reviewCount: 842,
+    priceLevel: 'Low',
+    priceDisplay: '₹ Low',
+    badgeType: 'Popular',
+    badgeColor: 'bg-[#1e3a8a] text-white',
+    image: puriBeachImg,
+    tipIcon: '🌊',
+    tipText: 'Sunrise is magical here. Less crowd in morning.',
+    tipBgClass: 'bg-[#eff6ff] text-[#1e3a8a]',
+    tipBorderClass: 'border-[#bfdbfe]',
+    verificationType: 'Officially verified',
+    updatedTime: '1 day ago',
+    description: 'Renowned golden sand shoreline on the Bay of Bengal featuring Blue Flag eco-certification, famous sand art sculptures by local artists, and tranquil sunrise vistas.',
+    bestTime: 'October to March',
+    duration: 'Full Day',
+    accessibility: ['Wheelchair accessible', 'Family friendly', 'Senior friendly'],
+  },
+  {
+    id: 'konark-sun-temple',
+    name: 'Konark Sun Temple',
+    category: 'Heritage • Culture',
+    categoryType: 'heritage',
+    district: 'Konark, Puri',
+    rating: 4.8,
+    reviewCount: 612,
+    priceLevel: 'Moderate',
+    priceDisplay: '₹ Moderate',
+    badgeType: 'Popular',
+    badgeColor: 'bg-[#1e3a8a] text-white',
+    image: konarkImg,
+    tipIcon: '🏛️',
+    tipText: 'Visit early to avoid heat and college groups.',
+    tipBgClass: 'bg-[#fffbeb] text-[#92400e]',
+    tipBorderClass: 'border-[#fde68a]',
+    verificationType: 'Officially verified',
+    updatedTime: '2 days ago',
+    description: 'A 13th-century UNESCO World Heritage monumental marvel designed as a gigantic stone chariot with 24 intricately carved wheels drawn by seven celestial horses.',
+    bestTime: 'November to February (Morning)',
+    duration: 'Half Day',
+    accessibility: ['Wheelchair accessible', 'Family friendly'],
+  },
+  {
+    id: 'chilika-lake',
+    name: 'Chilika Lake',
+    category: 'Nature • Adventure',
+    categoryType: 'nature',
+    district: 'Khordha, Puri, Ganjam',
+    rating: 4.7,
+    reviewCount: 524,
+    priceLevel: 'Moderate',
+    priceDisplay: '₹ Moderate',
+    badgeType: 'Community Pick',
+    badgeColor: 'bg-[#c2410c] text-white',
+    image: chilikaImg,
+    tipIcon: '⛵',
+    tipText: 'Boat ride at Satapada is beautiful at sunset.',
+    tipBgClass: 'bg-[#fff7ed] text-[#c2410c]',
+    tipBorderClass: 'border-[#ffedd5]',
+    verificationType: 'Community verified',
+    updatedTime: '5 days ago',
+    description: 'Asia’s largest coastal brackish lagoon spanning three districts, teeming with endangered Irrawaddy dolphins and hosting over a million winter migratory birds.',
+    bestTime: 'November to March',
+    duration: 'Full Day',
+    accessibility: ['Family friendly', 'Boat tours'],
+  },
+  {
+    id: 'raghurajpur-craft-village',
+    name: 'Raghurajpur Craft Village',
+    category: 'Arts & Crafts • Culture',
+    categoryType: 'arts',
+    district: 'Puri',
+    rating: 4.6,
+    reviewCount: 164,
+    priceLevel: 'Low',
+    priceDisplay: '₹ Low',
+    badgeType: 'Hidden Gem',
+    badgeColor: 'bg-[#1b4332] text-white',
+    image: raghurajpurImg,
+    tipIcon: '🎨',
+    tipText: 'Meet Master Artisans directly at their home studios.',
+    tipBgClass: 'bg-[#fef2f2] text-[#991b1b]',
+    tipBorderClass: 'border-[#fecaca]',
+    verificationType: 'Community verified',
+    updatedTime: '2 days ago',
+    description: 'A heritage crafts village where every family is an artisan preserving centuries of Pattachitra palm leaf engravings, cow dung toys, and traditional Gotipua folk dance.',
+    bestTime: 'October to March',
+    duration: 'Half Day',
+    accessibility: ['Walking tour', 'Family friendly'],
+  },
+  {
+    id: 'duduma-waterfall',
+    name: 'Duduma Waterfall',
+    category: 'Nature',
+    categoryType: 'nature',
+    district: 'Gajapati / Koraput',
+    rating: 4.6,
+    reviewCount: 93,
+    priceLevel: 'Low',
+    priceDisplay: '₹ Low',
+    badgeType: 'Hidden Gem',
+    badgeColor: 'bg-[#1b4332] text-white',
+    image: dudumaImg,
+    tipIcon: '📸',
+    tipText: 'Mist creates natural rainbows around 11 AM.',
+    tipBgClass: 'bg-[#edf7ee] text-[#1b4332]',
+    tipBorderClass: 'border-[#cde5cf]',
+    verificationType: 'Community verified',
+    updatedTime: '4 days ago',
+    description: 'A spectacular 175-meter (574 ft) horsetail waterfall on the Machkund River amidst deep pristine river gorges and indigenous Bonda tribal territory.',
+    bestTime: 'September to January',
+    duration: 'Half Day',
+    accessibility: ['Scenic viewpoint', 'Adventure trail'],
+  },
+  {
+    id: 'lingaraj-temple',
+    name: 'Lingaraj Temple',
+    category: 'Spiritual',
+    categoryType: 'spiritual',
+    district: 'Bhubaneswar',
+    rating: 4.7,
+    reviewCount: 404,
+    priceLevel: 'Low',
+    priceDisplay: '₹ Low',
+    badgeType: 'Popular',
+    badgeColor: 'bg-[#1e3a8a] text-white',
+    image: lingarajImg,
+    tipIcon: '🕉️',
+    tipText: 'Evening aarti at 6:30 PM with oil lamps is serene.',
+    tipBgClass: 'bg-[#fffbeb] text-[#92400e]',
+    tipBorderClass: 'border-[#fde68a]',
+    verificationType: 'Officially verified',
+    updatedTime: '1 day ago',
+    description: 'The largest and oldest temple in Bhubaneswar dating back to the 11th century, representing the pinnacle of Kalinga architectural prowess with a 55-meter central shikhara.',
+    bestTime: 'October to March',
+    duration: '2-3 Hours',
+    accessibility: ['Courtyard view', 'Heritage precinct'],
+  },
+  {
+    id: 'deomali-hills',
+    name: 'Deomali Hills',
+    category: 'Nature • Adventure',
+    categoryType: 'nature',
+    district: 'Koraput',
+    rating: 4.6,
+    reviewCount: 78,
+    priceLevel: 'Low',
+    priceDisplay: '₹ Low',
+    badgeType: 'Hidden Gem',
+    badgeColor: 'bg-[#1b4332] text-white',
+    image: deomaliImg,
+    tipIcon: '⛺',
+    tipText: 'Camp under the stars on Odisha\'s highest peak.',
+    tipBgClass: 'bg-[#edf7ee] text-[#1b4332]',
+    tipBorderClass: 'border-[#cde5cf]',
+    verificationType: 'Community verified',
+    updatedTime: '6 days ago',
+    description: 'Standing at 1,672 meters, Deomali is the highest peak in Odisha, featuring panoramic rolling meadows, hang gliding aero sports, and misty cloud walks.',
+    bestTime: 'September to February',
+    duration: 'Full Day / Overnight',
+    accessibility: ['Scenic road', 'Eco-cottages', 'Trekking'],
+  },
+];

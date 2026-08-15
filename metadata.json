@@ -1,0 +1,6 @@
+{
+  "name": "Odysha Travel Landing Page",
+  "description": "Discover Odisha your way with local intelligence, personalized journey planning, curated heritage, beaches, spiritual spots, and cultural destinations.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
